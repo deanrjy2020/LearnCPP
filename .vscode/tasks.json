@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "${HOME}/bin/dean-utils/backups/vscode/build.sh",
+            "args": [ ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "${HOME}/bin/dean-utils/backups/vscode/build.sh",
+            "args": [
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+        },
+        {
+            "label": "remake",
+            "type": "shell",
+            "command": "${HOME}/bin/dean-utils/backups/vscode/build.sh",
+            "args": [
+                "rebuild",
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        }
+    ]
+}
